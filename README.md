@@ -1,1 +1,2 @@
-script to print current working dirctory
+A root dirctory to perform diffrent simple shell scripts
+
