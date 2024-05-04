@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# forcefully terminates the '7-highlander' process using SIGKILL
+
+pkill -9 -f '7-highlander'
+echo "Sent SIGKILL to 7-highlander"
+
