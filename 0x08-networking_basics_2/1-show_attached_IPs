@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# The script displays all active IPv4 addresses on the machine
+
+# list all IPs assigned to interfaces and filter addresses then print
+ip -4 addr show | grep -oP 'inet \K[\d.]+' | grep -v '127.0.0.1'
+# print the loopback address
+echo "127.0.0.1"
+

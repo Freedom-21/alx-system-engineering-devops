@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# The script configures the IP addresses of localhost and facebook.com
+
+# Backing up the existing to revert later
+sudo cp /etc/hosts /etc/hosts.backup
+
+# remove any existing entries to avoid duplicates
+sudo sed -i '/localhost/d' /etc/hosts
+sudo sed -i '/facebook.com/d' /etc/hosts
+
+# add the new IP address
+echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts > /dev/null
+echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts > /dev/null
+
