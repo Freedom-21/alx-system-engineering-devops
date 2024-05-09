@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# The script that pings an IP adress passed as an argument
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 {IP_ADDRESS}"
+    exit 1
+fi
+
+# Assign the IP address from the arg
+IP_ADDRESS=$1
+
+# Ping the IP address 5 times
+ping -c 5 $IP_ADDRESS
+

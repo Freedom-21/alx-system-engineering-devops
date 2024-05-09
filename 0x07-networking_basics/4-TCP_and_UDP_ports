@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# The script listens TCP and UDP sockets with PID and some details
+echo "Active Internet connections (only servers)"
+echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+ss -tulnp | grep LISTEN
+
