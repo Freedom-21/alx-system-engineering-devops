@@ -1,0 +1,4 @@
+Host freedom_server
+  HostName 52.86.161.86
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
