@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This script generates a MySQL dump and compresses it to a tar.gz file
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <mysql_root_password>"
+    exit 1
+fi
+
+MYSQL_PASSWORD=$1
+BACKUP_NAME="$(date +'%d-%m-%Y').tar.gz"
+
+mysqldump -u root -p"$MYSQL_PASSWORD" --all-databases > backup.sql
+tar -czvf "$BACKUP_NAME" backup.sql
+
+rm backup.sql
+
