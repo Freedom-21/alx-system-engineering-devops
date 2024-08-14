@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+
+"""
+Module provides a recursive function to query the Reddit API
+and return a list containing the titles of all hot articles
+for a given subreddit.
+"""
+
 import requests
 
 
